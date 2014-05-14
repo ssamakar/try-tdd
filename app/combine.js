@@ -17,5 +17,25 @@
  * @returns {Object} object with all fields included
  */
 module.exports = function (fields) {
+	if (!Array.isArray(fields)){
+		return false;
+	} 
 
+	for (var j = 0; j<fields.length; j++){
+		if ((typeof fields[j]) != "object"){
+			return false;
+			}
+		}
+	
+	if (fields.length == 0){
+		return false;
+	}
+
+
+		// for (var i = 0; i<array.length; i++){
+  // 		for(key in object){
+  			
+  // 		}
+  // 	}
+	return {};
 }
