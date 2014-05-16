@@ -31,11 +31,17 @@ module.exports = function (fields) {
 		return false;
 	}
 
+	var outputObject = {};
+	fields.forEach(function(el){
+		for(key in el){
+			outputObject[key] = el[key];
+		}
+	})
 
 		// for (var i = 0; i<array.length; i++){
   // 		for(key in object){
   			
   // 		}
   // 	}
-	return {};
+	return outputObject;
 }
